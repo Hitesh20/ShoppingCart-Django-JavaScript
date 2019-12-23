@@ -1,0 +1,18 @@
+
+{% extends 'testing/basic.html' %}
+
+{%  block body %}
+
+{{ object_list }}
+<br>
+    {% for obj in object_list %}
+
+
+        {% comment %}<a href="product/{{ obj.id }}">{{ obj.title }}</a> - {{ obj.description }}<br>{% endcomment %}
+        <a href="{{ instance.get_absolute_url }}">{{ obj.title }}</a> - {{ obj.description }}<br>
+    {% endfor %}
+
+
+
+
+{% endblock %}

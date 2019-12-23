@@ -1,0 +1,15 @@
+{% extends 'testing/basic.html' %}
+
+{%  block body %}
+
+    {% for obj in object_list %}
+
+
+        {% comment %}<a href="product/{{ obj.id }}">{{ obj.title }}</a> - {{ obj.description }}<br>{% endcomment %}
+        {{ forloop.counter }}. <a href="{{ obj.id }}">{{ obj.title }}</a> - {{ obj.description }}<br>
+    {% endfor %}
+
+
+
+
+{% endblock %}

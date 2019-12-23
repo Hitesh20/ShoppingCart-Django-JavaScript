@@ -1,0 +1,9 @@
+{% extends 'testing/basic.html' %}
+
+{% block body %}
+<form action=".">
+    {{ form.as_p }}
+
+    <button type="submit" value="Save">Save</button>
+</form>
+{% endblock %}
